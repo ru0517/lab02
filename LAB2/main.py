@@ -27,6 +27,7 @@ Write a Python program that takes input from the user to create a list of intege
   ```
 """
 
+"""
 # Input
 input_numbers = input("Enter a series of space-separated integers: ")
 
@@ -38,6 +39,8 @@ numbers_list.sort()
 
 # Print Output
 print("Sorted list:", numbers_list)
+"""
+
 
 """-----------------------------------------------------------------------------
 
@@ -70,6 +73,7 @@ Extend the previous Python program to include tuples. Now, in addition to creati
   ```
 """
 
+"""
 # Input
 input_numbers = input("Enter a series of space-separated integers: ")
 
@@ -84,6 +88,8 @@ sorted_tuple = tuple(sorted(numbers_tuple))
 # Print Output
 print("Sorted list:", numbers_list)
 print("Sorted tuple:", sorted_tuple)
+
+"""
 
 """5.
 Extend the previous Python program to demonstrate the manipulation of lists using the append(), insert(), and remove() functions, and to emphasize the immutability of tuples.
@@ -108,6 +114,7 @@ Extend the previous Python program to demonstrate the manipulation of lists usin
   ```
 """
 
+"""
 # Input
 input_numbers = input("Enter a series of space-separated integers: ")
 
@@ -137,6 +144,8 @@ except AttributeError:
 # Print Output
 print("Modified list:", numbers_list)
 print("Tuple remains unchanged:", numbers_tuple)
+"""
+
 
 """--------------------------------------------------------------------------------
 1. **Set**:
@@ -193,31 +202,37 @@ Additionally, introduce sets and dictionaries and perform basic operations on th
   ```
 """
 
+
+"""
 # Input
 input_numbers = input("Enter a series of space-separated integers: ")
 
 # Convert Input
+numbers_list = list(map(int, input_numbers.split()))
+numbers_tuple = tuple(numbers_list)
+numbers_set = set(numbers_list)
+numbers_dict = {num: num**2 for num in numbers_list}
 
 # Manipulate List
-# Append 10 to the list
-# Insert 20 at index 2
-# Remove the element 8
+numbers_list.append(10)  # Append 10 to the list
+numbers_list.insert(2, 20)  # Insert 20 at index 2
+numbers_list.remove(8)  # Remove the element 8
 
 # Attempt to Modify Tuple (this will raise an error)
 try:
-    # Append 10 to the tuple
+    numbers_tuple.append(10)  # Append 10 to the tuple
 except AttributeError:
     print("Tuples are immutable and cannot be modified.")
 
 # Set Operations
-# Union
-# Intersection
-# Difference
+set_union = numbers_set.union({10, 11, 12})
+set_intersection = numbers_set.intersection({5, 8})
+set_difference = numbers_set.difference({1, 2})
 
 # Dictionary Operations
 print("Original Dictionary:", numbers_dict)
-# Add a new key-value pair
-# Delete an existing key-value pair
+numbers_dict[11] = 121  # Add a new key-value pair
+del numbers_dict[2]  # Delete an existing key-value pair
 
 # Print Output
 print("Modified list:", numbers_list)
@@ -226,6 +241,8 @@ print("Union of set:", set_union)
 print("Intersection of set:", set_intersection)
 print("Difference of set:", set_difference)
 print("Updated Dictionary:", numbers_dict)
+"""
+
 
 """7. **Built-in Types and Type Conversion**
 
@@ -268,35 +285,50 @@ print("Updated Dictionary:", numbers_dict)
 ```
 """
 
+'''
 # Input
 input_numbers = input("Enter a series of space-separated integers: ")
 
 # Convert Input
+numbers_list = list(map(int, input_numbers.split()))
+numbers_tuple = tuple(numbers_list)
+numbers_set = set(numbers_list)
+numbers_dict = {num: num**2 for num in numbers_list}
 
 # Manipulate List
+numbers_list.append(10)  # Append 10 to the list
+numbers_list.insert(2, 20)  # Insert 20 at index 2
+numbers_list.remove(8)  # Remove the element 8
 
 # Attempt to Modify Tuple (this will raise an error)
+try:
+    numbers_tuple.append(10)  # Append 10 to the tuple
+except AttributeError:
+    print("Tuples are immutable and cannot be modified.")
 
 # Set Operations
+set_union = numbers_set.union({10, 11, 12})
+set_intersection = numbers_set.intersection({5, 8})
+set_difference = numbers_set.difference(numbers_set - {9})
 
 # Dictionary Operations
 print("Original Dictionary:", numbers_dict)
-# Add a new key-value pair
-# Delete an existing key-value pair
+numbers_dict[11] = 121  # Add a new key-value pair
+del numbers_dict[2]  # Delete an existing key-value pair
 
 # Type Conversion
-# list_to_tuple =
-# list_to_set =
-# list_to_dict =
-# tuple_to_list =
-# tuple_to_set =
-# tuple_to_dict =
-# set_to_list =
-# set_to_tuple =
-# set_to_dict =
-# dict_to_list =
-# dict_to_tuple =
-# dict_to_set =
+list_to_tuple = tuple(numbers_list)
+list_to_set = set(numbers_list)
+list_to_dict = {i: i**2 for i in numbers_list}
+tuple_to_list = list(numbers_tuple)
+tuple_to_set = set(numbers_tuple)
+tuple_to_dict = {i: i**2 for i in numbers_tuple}
+set_to_list = list(numbers_set)
+set_to_tuple = tuple(numbers_set)
+set_to_dict = {i: i**2 for i in numbers_set}
+dict_to_list = list(numbers_dict.keys())
+dict_to_tuple = tuple(numbers_dict.keys())
+dict_to_set = set(numbers_dict.keys())
 
 # Print Output
 print("List to Tuple:", list_to_tuple)
@@ -311,6 +343,8 @@ print("Set to Dictionary:", set_to_dict)
 print("Dictionary to List:", dict_to_list)
 print("Dictionary to Tuple:", dict_to_tuple)
 print("Dictionary to Set:", dict_to_set)
+'''
+
 
 """8.
 Extend the previous Python program to write the output to a file and perform operations on that file.
@@ -338,56 +372,92 @@ Extend the previous Python program to write the output to a file and perform ope
 
 # Input
 input_numbers = input("Enter a series of space-separated integers: ")
-
 # Convert Input
-
+numbers_list = list(map(int, input_numbers.split()))
+numbers_tuple = tuple(numbers_list)
+numbers_set = set(numbers_list)
+numbers_dict = {num: num**2 for num in numbers_list}
 # Manipulate List
-
+numbers_list.append(10)  # Append 10 to the list
+numbers_list.insert(2, 20)  # Insert 20 at index 2
+numbers_list.remove(8)  # Remove the element 8
 # Attempt to Modify Tuple (this will raise an error)
-
+try:
+    numbers_tuple.append(10)  # Append 10 to the tuple
+except AttributeError:
+    print("Tuples are immutable and cannot be modified.")
 # Set Operations
-
+set_union = numbers_set.union({10, 11, 12})
+set_intersection = numbers_set.intersection({5, 8})
+set_difference = numbers_set.difference({1, 2})
 # Dictionary Operations
-
+print("Original Dictionary:", numbers_dict)
+numbers_dict[11] = 121  # Add a new key-value pair
+del numbers_dict[2]  # Delete an existing key-value pair
 # Type Conversion
+list_to_tuple = tuple(numbers_list)
+list_to_set = set(numbers_list)
+list_to_dict = {i: i**2 for i in numbers_list}
+tuple_to_list = list(numbers_tuple)
+tuple_to_set = set(numbers_tuple)
+tuple_to_dict = {i: i**2 for i in numbers_tuple}
+set_to_list = list(numbers_set)
+set_to_tuple = tuple(numbers_set)
+set_to_dict = {i: i**2 for i in numbers_set}
+dict_to_list = list(numbers_dict.keys())
+dict_to_tuple = tuple(numbers_dict.keys())
+dict_to_set = set(numbers_dict.keys())
 
 student_number = input("Enter your student number: ")
 
 # Write Output to File like this:
-    "Student Number: " + student_number
+with open('output.txt', 'w') as f:
+    f.write("Student Number: " + student_number + "\n")
+    f.write("Original List: " + str(numbers_list) + "\n")
+    f.write("Original Tuple: " + str(numbers_tuple) + "\n")
+    f.write("Original Set: " + str(numbers_set) + "\n")
+    f.write("Original Dictionary: " + str(numbers_dict) + "\n")
+    f.write("Manipulated List: " + str(numbers_list) + "\n")
+    f.write("Manipulated Tuple: " + str(numbers_tuple) + "\n")
+    f.write("Union of Set: " + str(set_union) + "\n")
+    f.write("Intersection of Set: " + str(set_intersection) + "\n")
+    f.write("Difference of Set: " + str(set_difference) + "\n")
+    f.write("Updated Dictionary: " + str(numbers_dict) + "\n")
+    f.write("List to Tuple: " + str(list_to_tuple) + "\n")
+    f.write("List to Set: " + str(list_to_set) + "\n")
+    f.write("List to Dictionary: " + str(list_to_dict) + "\n")
+    f.write("Tuple to List: " + str(tuple_to_list) + "\n")
+    f.write("Tuple to Set: " + str(tuple_to_set) + "\n")
+    f.write("Tuple to Dictionary: " + str(tuple_to_dict) + "\n")
+    f.write("Set to List: " + str(set_to_list) + "\n")
+    f.write("Set to Tuple: " + str(set_to_tuple) + "\n")
+    f.write("Set to Dictionary: " + str(set_to_dict) + "\n")
+    f.write("Dictionary to List: " + str(dict_to_list) + "\n")
+    f.write("Dictionary to Tuple: " + str(dict_to_tuple) + "\n")
+    f.write("Dictionary to Set: " + str(dict_to_set) + "\n")
 
-    "Original List: " + str(numbers_list)
-    "Original Tuple: " + str(numbers_tuple)
-    "Original Set: " + str(numbers_set)
-    "Original Dictionary: " + str(numbers_dict)
+# print Content of the file:
+with open('output.txt', 'r') as f:
+    file_content = f.read()
+    print("Content of the file:")
+    print(file_content)
 
-    "Manipulated List: " + str(numbers_list)
-    "Manipulated Tuple: " + str(numbers_tuple)
-    "Union of Set: " + str(set_union)
-    "Intersection of Set: " + str(set_intersection)
-    "Difference of Set: " + str(set_difference)
-    "Updated Dictionary: " + str(numbers_dict)
-
-    "List to Tuple: " + str(list_to_tuple)
-    "List to Set: " + str(list_to_set)
-    "List to Dictionary: " + str(list_to_dict)
-    "Tuple to List: " + str(tuple_to_list)
-    "Tuple to Set: " + str(tuple_to_set)
-    "Tuple to Dictionary: " + str(tuple_to_dict)
-    "Set to List: " + str(set_to_list)
-    "Set to Tuple: " + str(set_to_tuple)
-    "Set to Dictionary: " + str(set_to_dict)
-    "Dictionary to List: " + str(dict_to_list)
-    "Dictionary to Tuple: " + str(dict_to_tuple)
-    "Dictionary to Set: " + str(dict_to_set)
-
-# print "Content of the file:"
 
 # Perform Operations on File:
 #   Count the number of lines in the file
 #   Count the number of integers in the file
 #   Add all integers in the file (sum).
+with open('output.txt', 'r') as f:
+    lines = f.readlines()
+    print("Number of lines in the file:", len(lines))
+    integers = [int(word) for line in lines for word in line.split() if word.isdigit()]
+    print("Number of integers in the file:", len(integers))
+    print("Sum of all integers in the file:", sum(integers))
 #   Modify the content of the file
+with open('output.txt', 'a') as f:
+    f.write("\nNew line added\n")
+    
+
 
 """--------------------------------------------------------------------------------
 **Control Statements:**
